@@ -144,7 +144,8 @@ header nav ul li.active a::after{
     width:100%;
 }
 header nav .donate-btn{
-    border:2px solid gainsboro;
+    background:rgb(0, 158, 0);
+    border:2px solid rgb(0, 158, 0);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
