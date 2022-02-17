@@ -404,7 +404,7 @@ header nav .donate-btn{
 
 
 #manifestos{
-    padding:20px 0 0;
+    padding:20px 0 50px;
     background:linear-gradient(rgba(0, 78, 17, 0.9), rgba(0,129,28,0.9)), url("../src/background-1.jpg") no-repeat;
     background-size: cover;
     background-position: center;
@@ -453,40 +453,54 @@ header nav .donate-btn{
 }
 
 .below-part{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+    display:flex;
     position:relative;
-    bottom:-82px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    margin-top:80px;
 }
 .below-part .manifesto-image{
-    height:320px;
+    height:250px;
+    width:250px;
+    border-radius: 50%;
     overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin:auto;
 }
 .below-part .manifesto-title{
     text-align: center;
     padding:15px 50px;
 }
+.manifesto-title h2{
+    font-weight: 500;
+    font-size:22px;
+    color:whitesmoke;
+    margin-bottom: 10px;
+}
+.manifesto-title p{
+    margin-bottom: 10px;
+    color:gainsboro;
+    line-height: 25px;
+}
 .manifesto-title a{
     padding:15px 20px;
-    border:1px solid rgba(220, 220, 220, 0.6);
-    display: block;
-    color:whitesmoke;
-    font-weight: 600;
+    font-size:15px;
+    background:whitesmoke;
+    display: inline-block;
+    color:rgb(0, 158, 0);
+    border-radius: 8px;
+    font-weight: 500;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
-.manifesto-column:nth-child(1){
-    background: linear-gradient(rgba(0, 250, 208, 0.85),rgba(0, 250, 208, 0.85)), url("../src/flag.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.manifesto-column:nth-child(2){
-    background: linear-gradient(rgba(250, 0, 96, 0.85),rgba(250, 0, 96, 0.85)), url("../src/flag.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.manifesto-column:nth-child(3){
-    background: linear-gradient(rgba(0, 158, 250, 0.85),rgba(0, 158, 250, 0.85)), url("../src/flag.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+.manifesto-column{
+    width:350px;
 }
 
 .manifesto-column:hover .manifesto-image img{
@@ -501,7 +515,23 @@ header nav .donate-btn{
     cursor: pointer;
 }
 
-
+@media(max-width:950px){
+    .top-part{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .below-part{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:600px){
+    .top-part{
+        text-align:center;
+    }
+    .below-part{
+        grid-template-columns: repeat(1,1fr);
+        gap:20px;
+    }
+}
 #contact-action{
     padding:150px 0px 50px;
 }
