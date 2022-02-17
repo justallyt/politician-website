@@ -1,3 +1,12 @@
+//Preloader implementation
+let loader = document.querySelector("#preloader");
+
+window.addEventListener("load", ()=>{
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 5s";
+    loader.style.zIndex = "-3";
+});
+
 const header = document.querySelector('header')
 
 window.addEventListener("scroll",()=>{  
